@@ -1,0 +1,91 @@
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan:  hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --verLighhtWhite:  hsl(0, 0%, 95%);
+    --titleFont:  'Big Shoulders Display', cursive;
+    --descriptionFont: 'Lexend Deca', sans-serif
+}
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+}
+*,*:before, *:after {box-sizing: inherit;}
+body{
+    background-color: var(--verLighhtWhite);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+p{
+    font-family: var(--descriptionFont);
+    color: var(--transparentWhite);
+}
+a{text-decoration:none;}
+img{width:100%}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    color: var(--verLighhtWhite);
+    font-family: var(--titleFont);
+}
+h1{font-size: 4rem;}
+h2{font-size: 3.5rem;}
+h3{font-size: 2.4rem;}
+.container-card{
+    margin: 5rem;
+}
+@media (min-width: 768px) {
+     .container-card{
+         display:grid; 
+         grid-template-columns: repeat(3,1fr);
+     }
+}
+.card-sedans{
+    background-color: var(--BrightOrange);
+    border-radius: 1rem 1rem 0 0;
+    padding: 4rem;
+}
+.card-suvs{
+    background-color: var(--darkCyan);
+    padding: 4rem;
+}
+.card-luxury{
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 0 1rem 1rem;
+    padding: 5rem;
+}
+@media (min-width: 768px) {
+    .card-luxury{
+        border-radius: 0 1rem 1rem 0;
+    }  
+    .card-sedans{
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+.card__Icon{
+    width: 5rem;
+}
+.card__btn{
+    padding:1rem 3rem;
+    background-color: var(--transparentWhite);
+    border-radius: 3rem;
+    font-family: var(--descriptionFont);
+}
+.card__button-sedans{
+    color: var(--BrightOrange);
+}
+.card__button-suvs{
+    color: var(--darkCyan);
+}
+.card__button-luxury{
+    color: var(--veryDarkCyan);
+}
+@media (min-width: 768px) {
+     .card__description{
+         margin-bottom:10rem;
+         margin-right: 7rem;
+     }
+}
